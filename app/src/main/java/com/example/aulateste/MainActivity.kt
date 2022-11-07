@@ -17,20 +17,23 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-
+            //declarando mensagem do cartão de mensagem
+            MessageCard("Lucas")
         }
     }
 }
 
 @Composable
+//declarando o metódo de cartão de mensagem
 fun MessageCard(name: String) {
     Text(text = "Olá $name!")
 }
-
+//criando o preview do projeto
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     AulaTesteTheme {
+        //chamando o metódo de cartão de mensagem
         MessageCard("Lucas")
     }
 }
